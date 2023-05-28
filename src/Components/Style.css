@@ -1,0 +1,120 @@
+/* import bg from "./Images/bg1.avif"; */
+.container {
+  text-align: center;
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("./Images/1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.weather::before {
+  content: "";
+  position: absolute;
+  background-position: top;
+}
+.weather {
+  background: linear-gradient(rgba(2, 2, 244, 0.4), rgba(126, 126, 255, 0.8));
+  position: relative;
+  animation: simple 1s 0.2s infinite alternate-reverse linear;
+  width: 350px;
+  height: 90vh;
+  padding: 16px 16px;
+  border-radius: 5px;
+  border: 3px;
+}
+@keyframes simple {
+  0% {
+    background: linear-gradient(rgba(2, 2, 244, 0.2), rgba(126, 126, 255, 0.3));
+  }
+  25% {
+    background: linear-gradient(rgba(2, 2, 244, 0.4), rgba(126, 126, 255, 0.5));
+  }
+  50% {
+    background: linear-gradient(rgba(2, 2, 244, 0.6), rgba(126, 126, 255, 0.7));
+  }
+  75% {
+    background: linear-gradient(rgba(2, 2, 244, 0.8), rgba(126, 126, 255, 0.9));
+  }
+  100% {
+    background: linear-gradient(rgba(2, 2, 244, 0.9), rgba(126, 126, 255, 0.1));
+  }
+}
+.weather .search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather .search input {
+  width: 80%;
+  padding: 12px 16px;
+  border-radius: 5px;
+  border: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 50px;
+}
+.weather .search input:focus {
+  outline: none;
+}
+.weather .search .search_btn {
+  padding: 12px 16px;
+  border-radius: 80px;
+  border: none;
+}
+.w_info img:nth-of-type(1) {
+  width: 40%;
+}
+
+.w_info h1 {
+  font-size: 50px;
+  color: white;
+}
+.w_info h2 {
+  color: white;
+  font-size: 40px;
+}
+.details {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 12vh;
+}
+.details .col {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+.details .col img {
+  width: 70px;
+}
+.details .col p {
+  font-size: 25px;
+}
+.text {
+  padding-left: 12px;
+}
+.Error p {
+  font-size: 30px;
+  color: red;
+}
+@media (max-width: 390px) {
+  .weather {
+    background: linear-gradient(rgba(2, 2, 244, 0.4), rgba(126, 126, 255, 0.8));
+    position: relative;
+    animation: simple 1s 0.2s infinite alternate-reverse linear;
+    width: 320px;
+    height: 90vh;
+    padding: 16px 16px;
+    border-radius: 5px;
+    border: 3px;
+  }
+}
+
+
